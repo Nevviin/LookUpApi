@@ -1,4 +1,5 @@
 ﻿using LookUp.Api.Models;
+using LookUp.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,17 +15,20 @@ namespace LookUp.Api.Controllers
     public class CandidateController : ControllerBase
     {
         private readonly ILogger _logger;
-        public CandidateController(ILogger<CandidateController> logger)
+        private readonly ICandidateService _candidateService;
+        public CandidateController(ILogger<CandidateController> logger,
+            ICandidateService candidateService)
         {
             _logger = logger;
+            _candidateService = candidateService;
         }
 
         [Produces("application/json")]
         public ActionResult<Candidate> GetCandidate()
         {
-            //_logger.LogInformation("Candidate Get Executeing");
-            return Ok(new Candidate { Name = "test", Phone = "test" });
-            
+            var defaultCandidate = _candidateService.GetDefaultCandidate();
+            return Ok(defaultCandidate);
+
         }
 
     }
