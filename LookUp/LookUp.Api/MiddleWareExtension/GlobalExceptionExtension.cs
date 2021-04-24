@@ -20,7 +20,7 @@ namespace LookUp.Api.MiddleWareExtension
             {
                 appError.Run(async context =>
                 {
-                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                     context.Response.ContentType = "application/json";
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature != null)
@@ -29,8 +29,8 @@ namespace LookUp.Api.MiddleWareExtension
                         await context.Response.WriteAsync(new ErrorData()
                         {
                             StatusCode = context.Response.StatusCode,
-                            Message = "Internal Server Error."
-                        }.ToString());
+                            Message = "Internal Server Error"
+                        }.ToString()); ;
                     }
                 });
             });

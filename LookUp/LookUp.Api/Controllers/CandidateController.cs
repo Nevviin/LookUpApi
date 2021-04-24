@@ -24,11 +24,11 @@ namespace LookUp.Api.Controllers
         }
 
         [Produces("application/json")]
+        [HttpGet]
         public ActionResult<Candidate> GetCandidate()
         {
             var defaultCandidate = _candidateService.GetDefaultCandidate();
             return Ok(defaultCandidate);
-
         }
 
     }
