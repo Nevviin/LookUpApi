@@ -28,7 +28,8 @@ namespace LookUp.Api.Services
         {
             try {
                 var defaultCandidate = new Candidate();
-                _configuration.GetSection("DefaultCandidate").Bind(defaultCandidate);
+                _configuration.GetSection("DefaultCandidate4").Bind(defaultCandidate);
+                throw new Exception("testing error");
                 return defaultCandidate;
             }
             catch (Exception ex)

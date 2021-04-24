@@ -9,8 +9,4 @@
     <PackageReference Include="serilog.aspnetcore" Version="4.1.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MiddleWareExtension\" />
-  </ItemGroup>
-
 </Project>
