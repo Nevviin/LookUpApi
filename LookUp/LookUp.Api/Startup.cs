@@ -21,6 +21,8 @@ namespace LookUp.Api
             services.AddHttpClient();
             services.AddTransient<ICandidateService, CandidateService>();
             services.AddTransient<ILocationService, LocationService>();
+            services.AddTransient<IHelperService, HelperService>();
+            services.AddTransient<IListingService, ListingService>();
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {

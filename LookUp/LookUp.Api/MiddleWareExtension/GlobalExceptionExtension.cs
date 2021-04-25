@@ -29,8 +29,8 @@ namespace LookUp.Api.MiddleWareExtension
                         await context.Response.WriteAsync(new ErrorData()
                         {
                             StatusCode = context.Response.StatusCode,
-                            Message = "Internal Server Error"
-                        }.ToString()); ;
+                            Message = contextFeature.Error.Message
+                        }.ToString()); 
                     }
                 });
             });

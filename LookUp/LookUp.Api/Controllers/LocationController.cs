@@ -14,17 +14,20 @@ namespace LookUp.Api.Controllers
     {
         private readonly ILogger _logger;
         private readonly ILocationService _locationService;
+        private readonly IHelperService _helperService;
         public LocationController(ILogger<LocationController> logger,
-            ILocationService locationService)
+            ILocationService locationService
+            , IHelperService helperService)
         {
             _logger = logger;
             _locationService = locationService;
+             _helperService =helperService;
         }
 
         [HttpGet]
         public async Task<ActionResult<string>> GetCity([FromQuery][Required]string ipAddress)
         {
-            var isValidIp = IPAddress.TryParse(ipAddress, out IPAddress ip);
+            var isValidIp = _helperService.IsValidIp(ipAddress);
             if(!isValidIp) throw new Exception("Invalid Ip Address");
             var locationDetails = await _locationService.FetchLocation(ipAddress);
             return locationDetails.City;
