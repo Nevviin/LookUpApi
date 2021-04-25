@@ -28,7 +28,7 @@ namespace LookUp.Api.Controllers
         public async Task<ActionResult<string>> GetCity([FromQuery][Required]string ipAddress)
         {
             var isValidIp = _helperService.IsValidIp(ipAddress);
-            if(!isValidIp) throw new Exception("Invalid Ip Address");
+            if(!isValidIp) throw new Exception("Invalid IP Address");
             var locationDetails = await _locationService.FetchLocation(ipAddress);
             return Ok(locationDetails.City);
         }
