@@ -1,0 +1,134 @@
+{
+  "from": "Sydney Airport (SYD), T1 International Terminal",
+  "to": "46 Church Street, Parramatta NSW, Australia",
+  "listings": [
+    {
+      "name": "Listing 1",
+      "pricePerPassenger": 49.38,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 2",
+      "pricePerPassenger": 64.32,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 3",
+      "pricePerPassenger": 59.23,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 4",
+      "pricePerPassenger": 41.82,
+      "vehicleType": {
+        "name": "Hatchback",
+        "maxPassengers": 2
+      }
+    },
+    {
+      "name": "Listing 5",
+      "pricePerPassenger": 76.97,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 6",
+      "pricePerPassenger": 55.1,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 7",
+      "pricePerPassenger": 88.81,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 8",
+      "pricePerPassenger": 53.39,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 9",
+      "pricePerPassenger": 49.2,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 10",
+      "pricePerPassenger": 21.19,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 11",
+      "pricePerPassenger": 17.76,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 12",
+      "pricePerPassenger": 18.92,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 13",
+      "pricePerPassenger": 13.48,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 14",
+      "pricePerPassenger": 17.1,
+      "vehicleType": {
+        "name": "SUV",
+        "maxPassengers": 5
+      }
+    },
+    {
+      "name": "Listing 15",
+      "pricePerPassenger": 16.81,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    },
+    {
+      "name": "Listing 16",
+      "pricePerPassenger": 52.63,
+      "vehicleType": {
+        "name": "Sedan",
+        "maxPassengers": 3
+      }
+    }
+  ]
+}
