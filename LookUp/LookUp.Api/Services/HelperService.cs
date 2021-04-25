@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 using System;
 using System.Net;
@@ -40,7 +41,11 @@ namespace LookUp.Api.Services
         {
             try
             {
-                var schema = JSchema.Parse(jsonString);
+             
+                 JToken jToken = JToken.Parse(jsonString);
+                JObject jObject = JObject.Parse((string)jToken);
+                var schema = JSchema.Parse(jObject.ToString());
+                
                 return true;
             }
             catch (Exception ex)

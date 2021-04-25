@@ -39,8 +39,8 @@ namespace LookUp.Api.Services
                 var response = await httpClient.GetAsync(locationUrl);
                 response.EnsureSuccessStatusCode();
                 var responseBody = await response.Content.ReadAsStringAsync();
-                var isValidResponse = _helperService.IsValidJson(responseBody);
-                if (!isValidResponse) throw new Exception("No location result found for this Ip");
+                //var isValidResponse = _helperService.IsValidJson(responseBody);
+                //if (!isValidResponse) throw new Exception("No location result found for this Ip");
                 var locationDetails = JsonConvert.DeserializeObject<LocationDetails>(responseBody);
                 return locationDetails;
             }

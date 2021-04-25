@@ -30,7 +30,7 @@ namespace LookUp.Api.Controllers
             var isValidIp = _helperService.IsValidIp(ipAddress);
             if(!isValidIp) throw new Exception("Invalid Ip Address");
             var locationDetails = await _locationService.FetchLocation(ipAddress);
-            return locationDetails.City;
+            return Ok(locationDetails.City);
         }
     }
 }
